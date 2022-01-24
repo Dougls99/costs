@@ -10,6 +10,17 @@
       "cost": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "meu projeto 10",
+      "budget": "10000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
     }
   ],
   "categories": [
