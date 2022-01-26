@@ -1,26 +1,19 @@
 {
   "projects": [
     {
-      "name": "teste",
-      "budget": "1111111111",
+      "name": "projeto",
+      "budget": "1000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": null,
+      "services": [
+        {
+          "id": "0c14ed0b-3491-4500-8d47-f81aaa598ca9"
+        }
+      ],
       "id": 1
-    },
-    {
-      "name": "meu projeto 10",
-      "budget": "10000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
     }
   ],
   "categories": [
