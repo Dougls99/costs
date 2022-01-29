@@ -1,19 +1,61 @@
 {
   "projects": [
     {
-      "name": "projeto",
-      "budget": "1000",
+      "name": "teste",
+      "budget": "1200",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": null,
       "services": [
         {
-          "id": "0c14ed0b-3491-4500-8d47-f81aaa598ca9"
+          "id": "f5a1f5b8-4714-4788-9aee-e8d9cc9ed03b"
+        },
+        {
+          "id": "64b9c503-0396-4677-8963-aff50b0fea5e"
+        },
+        {
+          "id": "dbdd7bda-d5d8-401b-9f2e-c0bfcdca1162"
+        },
+        {
+          "id": "f264292a-05b1-4ac9-a6ef-fea42f1a2fde"
+        },
+        {
+          "id": "38e89a52-ba07-4c32-bc93-456969f219fa"
         }
       ],
       "id": 1
+    },
+    {
+      "name": "meu projeto 1",
+      "budget": "10",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": null,
+      "services": [
+        {
+          "id": "25b9e450-2910-45cb-875b-9de58087f59a"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Douglas Pereira da Rocha",
+      "budget": "1111",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": null,
+      "services": [
+        {
+          "id": "e11e5e41-6801-41ec-bd49-775d75db4566"
+        }
+      ],
+      "id": 3
     }
   ],
   "categories": [

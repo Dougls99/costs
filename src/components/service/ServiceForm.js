@@ -7,7 +7,7 @@ import styles from '../project/ProjectForm.module.css'
 function ServiceForm({handleSubmit, btnText, projectData}) {
   const [service, setService] = useState({})
 
-  function submit(e) {
+  const submit = (e) => {
     e.preventDefault()
     projectData.services.push(service)
     handleSubmit(projectData)

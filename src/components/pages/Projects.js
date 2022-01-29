@@ -10,7 +10,6 @@ import Loading from '../layout/Loading'
 import styles from './Projects.module.css'
 
 function Projects() {
-
   const [projects, setProjects] = useState ([])
   const [removeLoading, setRemoveLoading] = useState(false)
   const [projectMessage, setProjectMessage] = useState('')
@@ -22,7 +21,8 @@ function Projects() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    //Para visualizar Loading
+    setTimeout(() => 
       fetch ('http://localhost:5000/projects', {
       method: 'GET',
       headers:{
@@ -33,9 +33,8 @@ function Projects() {
     .then((data) => {
       setProjects (data)
       setRemoveLoading(true)
-    })
-    .catch((err) => console.log(err))
-    }, 3000)
+    }),
+     100,)
   }, [])
 
   function removeProject(id) {
@@ -45,11 +44,10 @@ function Projects() {
         'Content-Type': 'application/json'
       },
     }).then(resp => resp.json())
-    .then(() => {
+    .then((data) => {
       setProjects(projects.filter((project) => project.id !== id))
       setProjectMessage('Projeto removido com sucesso!')
     })
-    .catch (err => console.log(err))
   }
 
   return (
@@ -62,7 +60,8 @@ function Projects() {
       {projectMessage && <Message type="success" msg={projectMessage} />}
       <Container customClass="start">
         {projects.length > 0 && 
-         projects.map((project) => ( <ProjectCard
+         projects.map((project) => ( 
+         <ProjectCard
           id={project.id}
           name={project.name}
           budget={project.budget}
@@ -74,8 +73,7 @@ function Projects() {
         {!removeLoading && <Loading />}
         {removeLoading && projects.length === 0 && (
           <p>Não há projetos cadastrados!</p>
-        )
-        }
+        )}
       </Container>
     </div>
   )
