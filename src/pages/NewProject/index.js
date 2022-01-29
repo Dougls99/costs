@@ -1,33 +1,31 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
-import ProjectForm from '../project/ProjectForm';
-
-import styles from './NewProject.module.css';
+import { ProjectForm } from "../../components";
+import styles from "./NewProject.module.css";
 
 function NewProject() {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function createPost(project) {
-
     //initialize cost and services
-    project.cost = 0
-    project.services = []
+    project.cost = 0;
+    project.services = [];
 
-    fetch('http://localhost:5000/projects', {
-      method: 'POST',
+    fetch("http://localhost:5000/projects", {
+      method: "POST",
       headers: {
-        'Content-type': 'application/json',
+        "Content-type": "application/json",
       },
-      body: JSON.stringify(project)
-    }) 
-    .then((resp) => resp.json())
-    .then((data) => {
-      console.log(data) 
-      navigate('/projects', {state: { message: 'Projeto criado com sucesso!' }})
+      body: JSON.stringify(project),
     })
-    .catch(err => console.log(err))
-
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        navigate("/projects", {
+          state: { message: "Projeto criado com sucesso!" },
+        });
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -36,7 +34,7 @@ function NewProject() {
       <p>Crie seu projeto para depois adicionar os serviços</p>
       <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />
     </div>
-  )
+  );
 }
 
-export default NewProject
+export default NewProject;
