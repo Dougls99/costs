@@ -70,15 +70,16 @@ function Project() {
 
     // last service
     const lastService = project.services[project.services.length - 1];
-
     lastService.id = uuidv4();
 
-    const lastServiceCost = lastService.cost;
-
-    const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost);
+    // Sobre o laço for...in => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement
+    let valueOfAllServices = 0;
+    for (let i in project.services) {
+      valueOfAllServices += parseFloat(project.services[i].cost);
+    }
 
     // maximum value validation
-    if (newCost > parseFloat(project.budget)) {
+    if (valueOfAllServices > parseFloat(project.budget)) {
       setMessage("Orçamento ultrapassado, verifique o valor do serviço");
       setType("error");
       project.services.pop();
@@ -86,7 +87,7 @@ function Project() {
     }
 
     //add service cost to project total cost
-    project.cost = newCost;
+    project.cost = valueOfAllServices;
 
     //update project
     fetch(`http://localhost:5000/projects/${project.id}`, {
