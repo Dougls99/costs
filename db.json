@@ -10,19 +10,10 @@
       "cost": null,
       "services": [
         {
-          "id": "f5a1f5b8-4714-4788-9aee-e8d9cc9ed03b"
-        },
-        {
-          "id": "64b9c503-0396-4677-8963-aff50b0fea5e"
-        },
-        {
-          "id": "dbdd7bda-d5d8-401b-9f2e-c0bfcdca1162"
-        },
-        {
-          "id": "f264292a-05b1-4ac9-a6ef-fea42f1a2fde"
-        },
-        {
-          "id": "38e89a52-ba07-4c32-bc93-456969f219fa"
+          "name": "meu projeto 1",
+          "cost": "132",
+          "description": "123",
+          "id": "fc821d80-4d8f-4fb2-8835-62d8bd281c6b"
         }
       ],
       "id": 1
